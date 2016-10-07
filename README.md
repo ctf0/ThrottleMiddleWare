@@ -1,5 +1,3 @@
-# ThrottleMiddleWare
-
 - save file to `app/Http/Middleware/ThrottleMiddleWare.php`
 - Then go to ***routeMiddleware*** array in **app/Http/Kernel.php** and change
 
