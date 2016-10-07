@@ -10,5 +10,7 @@
 ```
 
 ** the new middleware extends the original so no lossing functionality here
+
 ** we simply changed the plain `Too Many Attempts.` to a custom view instead.
+
 ** you can find the view file among others in https://github.com/ctf0/Error-Views
