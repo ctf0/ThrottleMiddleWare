@@ -9,9 +9,9 @@ class Throttle extends ThrottleRequests
 {
     protected function buildResponse($key, $maxAttempts)
     {
-        $response = new Response(view('errors.429'), 429);
-
         $retryAfter = $this->limiter->availableIn($key);
+
+        $response = new Response(view('errors.429', compact('retryAfter')), 429);
 
         return $this->addHeaders(
             $response, $maxAttempts,
