@@ -9,4 +9,4 @@
 'throttle' => \App\Http\Middleware\Throttle::class,
 ```
 
-** you can find the view file among others in https://github.com/ctf0/Error-Views
+** you can find the view file among others in https://github.com/ctf0/Error-Views/tree/5.5
