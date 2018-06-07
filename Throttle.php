@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Routing\Middleware\ThrottleRequests;
-use Symfony\Component\HttpKernel\Exception\HttpException;
+use Illuminate\Http\Exceptions\ThrottleRequestsException;
 
 class Throttle extends ThrottleRequests
 {
@@ -17,8 +17,8 @@ class Throttle extends ThrottleRequests
             $retryAfter
         );
 
-        return new HttpException(
-            429, trans('auth.throttle', ['seconds'=>$retryAfter]), null, $headers
+        return new ThrottleRequestsException(
+            trans('auth.throttle', ['seconds'=>$retryAfter]), null, $headers
         );
     }
 }
